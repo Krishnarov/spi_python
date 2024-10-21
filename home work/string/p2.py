@@ -1,0 +1,8 @@
+a=input("enter your name ")
+print(a)
+print(a.isalnum())
+#print(a.isalfa())
+print(a.islower())
+#print(a.isuppar())
+print(a.title())
+print(a.isspace())

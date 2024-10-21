@@ -1,0 +1,1 @@
+{'word': 'mins', 'csc': 'sc', 'sdcs': 'dsdfv', 'dgdfv': 'fdsvd', 'ewfe': 'frew', 'asdf': 'asfd', 'dsfgdfgdf': 'sgdfgdfg', 'dfsd': 'dfgdf', 'vdvdf': 'dfvf', 'apple': 'seb'}

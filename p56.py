@@ -1,0 +1,5 @@
+sents=input("enter sentense ")
+print(sents)
+fw=input("find what ")
+rw=input("replace width ")
+print("modified sentence : "+sents.replace(fw.rw))

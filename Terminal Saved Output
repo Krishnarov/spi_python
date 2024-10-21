@@ -1,0 +1,137 @@
+Last login: Mon Sep  2 16:46:39 on ttys000
+admin@192 ~ % brew install mysql pkg-confi
+Warning: No available formula with the name "pkg-confi". Did you mean pkg-config or pkgconf?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+pkg-config                 pkg-config-wrapper         pkgconf
+
+To install pkg-config, run:
+  brew install pkg-config
+admin@192 ~ % pip3 install mysqlclient
+Collecting mysqlclient
+  Using cached mysqlclient-2.2.4.tar.gz (90 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... error
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [30 lines of output]
+      /bin/sh: pkg-config: command not found
+      /bin/sh: pkg-config: command not found
+      /bin/sh: pkg-config: command not found
+      Trying pkg-config --exists mysqlclient
+      Command 'pkg-config --exists mysqlclient' returned non-zero exit status 127.
+      Trying pkg-config --exists mariadb
+      Command 'pkg-config --exists mariadb' returned non-zero exit status 127.
+      Trying pkg-config --exists libmariadb
+      Command 'pkg-config --exists libmariadb' returned non-zero exit status 127.
+      Traceback (most recent call last):
+        File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+          main()
+        File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+          return hook(config_settings)
+                 ^^^^^^^^^^^^^^^^^^^^^
+        File "/private/var/folders/zb/010n5k394vbbczxsllctrxph0000gn/T/pip-build-env-7a58_529/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 332, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/private/var/folders/zb/010n5k394vbbczxsllctrxph0000gn/T/pip-build-env-7a58_529/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 302, in _get_build_requires
+          self.run_setup()
+        File "/private/var/folders/zb/010n5k394vbbczxsllctrxph0000gn/T/pip-build-env-7a58_529/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 318, in run_setup
+          exec(code, locals())
+        File "<string>", line 155, in <module>
+        File "<string>", line 49, in get_config_posix
+        File "<string>", line 28, in find_package_name
+      Exception: Can not find valid pkg-config name.
+      Specify MYSQLCLIENT_CFLAGS and MYSQLCLIENT_LDFLAGS env vars manually
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+admin@192 ~ % brew install mysql-client pkg-config
+==> Downloading https://ghcr.io/v2/homebrew/core/mysql-client/manifests/9.0.1
+######################################################################### 100.0%
+==> Fetching dependencies for mysql-client: libevent, libcbor and libfido2
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/manifests/2.1.12_1
+######################################################################### 100.0%
+==> Fetching libevent
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/blobs/sha256:d0557018f
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libcbor/manifests/0.11.0
+######################################################################### 100.0%
+==> Fetching libcbor
+==> Downloading https://ghcr.io/v2/homebrew/core/libcbor/blobs/sha256:edb0c54d25
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libfido2/manifests/1.15.0
+######################################################################### 100.0%
+==> Fetching libfido2
+==> Downloading https://ghcr.io/v2/homebrew/core/libfido2/blobs/sha256:139818589
+######################################################################### 100.0%
+==> Fetching mysql-client
+==> Downloading https://ghcr.io/v2/homebrew/core/mysql-client/blobs/sha256:6ea08
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/pkg-config/manifests/0.29.2_3
+######################################################################### 100.0%
+==> Fetching pkg-config
+==> Downloading https://ghcr.io/v2/homebrew/core/pkg-config/blobs/sha256:a6ba807
+######################################################################### 100.0%
+==> Installing dependencies for mysql-client: libevent, libcbor and libfido2
+==> Installing mysql-client dependency: libevent
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/manifests/2.1.12_1
+Already downloaded: /Users/admin/Library/Caches/Homebrew/downloads/68b113f9ab63db45f4e1860de522ce2ca4fa081eb3c0d5c7d6005a35c3cf8d06--libevent-2.1.12_1.bottle_manifest.json
+==> Pouring libevent--2.1.12_1.monterey.bottle.tar.gz
+🍺  /usr/local/Cellar/libevent/2.1.12_1: 57 files, 2MB
+==> Installing mysql-client dependency: libcbor
+==> Downloading https://ghcr.io/v2/homebrew/core/libcbor/manifests/0.11.0
+Already downloaded: /Users/admin/Library/Caches/Homebrew/downloads/547a8f3a73e95b1a6ae76032004f514d926b4dbe82bab530cb3dd011c85c23ed--libcbor-0.11.0.bottle_manifest.json
+==> Pouring libcbor--0.11.0.monterey.bottle.tar.gz
+🍺  /usr/local/Cellar/libcbor/0.11.0: 33 files, 180.9KB
+==> Installing mysql-client dependency: libfido2
+==> Downloading https://ghcr.io/v2/homebrew/core/libfido2/manifests/1.15.0
+Already downloaded: /Users/admin/Library/Caches/Homebrew/downloads/292955ce6f66d4d7d827690a78eeac2946aab6468af64c128d6083ee8658337d--libfido2-1.15.0.bottle_manifest.json
+==> Pouring libfido2--1.15.0.monterey.bottle.tar.gz
+🍺  /usr/local/Cellar/libfido2/1.15.0: 562 files, 1.2MB
+==> Installing mysql-client
+==> Pouring mysql-client--9.0.1.monterey.bottle.tar.gz
+==> Caveats
+mysql-client is keg-only, which means it was not symlinked into /usr/local,
+because it conflicts with mysql (which contains client libraries).
+
+If you need to have mysql-client first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/mysql-client/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find mysql-client you may need to set:
+  export LDFLAGS="-L/usr/local/opt/mysql-client/lib"
+  export CPPFLAGS="-I/usr/local/opt/mysql-client/include"
+==> Summary
+🍺  /usr/local/Cellar/mysql-client/9.0.1: 120 files, 124.7MB
+==> Running `brew cleanup mysql-client`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Pouring pkg-config--0.29.2_3.monterey.bottle.tar.gz
+🍺  /usr/local/Cellar/pkg-config/0.29.2_3: 11 files, 657KB
+==> Running `brew cleanup pkg-config`...
+==> Caveats
+==> mysql-client
+mysql-client is keg-only, which means it was not symlinked into /usr/local,
+because it conflicts with mysql (which contains client libraries).
+
+If you need to have mysql-client first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/mysql-client/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find mysql-client you may need to set:
+  export LDFLAGS="-L/usr/local/opt/mysql-client/lib"
+  export CPPFLAGS="-I/usr/local/opt/mysql-client/include"
+
+For pkg-config to find mysql-client you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig"
+admin@192 ~ % pip3 install mysqlclient
